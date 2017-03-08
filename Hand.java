@@ -1,9 +1,9 @@
 
 public class Hand {
-protected static  Card[] cardsInHand;
+protected   Card[] cardsInHand;
 private Dealer dealer;
-protected static int pos;
-protected static int value;
+protected  int pos;
+protected  int value;
 public Hand()
 {
 cardsInHand=new Card[12];
@@ -24,7 +24,7 @@ else
 	return;
 }
 
-public static int handValue()
+public  int handValue()
 {
   value=0;
   for(int i=0;i<pos;i++)
