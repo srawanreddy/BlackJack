@@ -8,26 +8,26 @@ public class Player{
 	}
 	public boolean isBusted()
 	{
-		return(Hand.handValue()>21);
+		return(hand.handValue()>21);
 	}
 	
 	public boolean isBlackJack()
 	{
-		return(Hand.handValue()==21);
+		return(hand.handValue()==21);
 	}
 	public void blackJack()
 	{
 		System.out.println("Players Cards: ");
 		hand.takeCard();
 		hand.takeCard();
-		System.out.println("Total Value: "+ Hand.handValue());
+		System.out.println("Total Value: "+ hand.handValue());
 		while(!isBusted()&&!isBlackJack()){
 			System.out.println("Press 1 to continue, 2 to drop the game");
 			if(sc.nextInt()==1)
 			{
 				System.out.println("Players Cards: ");
 				hand.takeCard();
-				System.out.println("Total Value: "+ Hand.handValue());
+				System.out.println("Total Value: "+ hand.handValue());
 			}
 			else 
 			{
